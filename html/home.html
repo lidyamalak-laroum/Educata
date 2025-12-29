@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Choose Module</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="flow-page">
+
+    <div class="dashboard-container fade-in">
+        <header class="nav-header">
+            <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i></a>
+            <!-- Lightbulb icon from design -->
+            <i class="fas fa-lightbulb" style="font-size: 3rem; color: #ffbf00;"></i>
+        </header>
+
+        <div class="course-header">
+            <h1 style="color: #ffbf00; font-size: 3rem; text-transform: uppercase; line-height: 1;">Choose<br>Module
+            </h1>
+            <p style="color: #fff; margin-top: 1rem; font-size: 1.1rem;">Select a module to start the quiz</p>
+        </div>
+
+        <div class="grid-container">
+            <!-- Algorithmics -->
+            <a href="course.html?module=Algorithmics" class="module-card bg-orange">
+                <i class="fas fa-chart-line card-icon"></i>
+                <h3 class="card-title">Algorithmics</h3>
+            </a>
+
+            <!-- Algebra -->
+            <a href="course.html?module=Algebra" class="module-card bg-dark-green">
+                <span class="card-icon" style="font-family: serif; font-weight: bold;">A/a</span>
+                <h3 class="card-title">Algebra</h3>
+            </a>
+
+            <!-- Mechanics -->
+            <a href="course.html?module=Mechanics" class="module-card bg-green">
+                <i class="fas fa-cog card-icon"></i>
+                <h3 class="card-title">Mechanics</h3>
+            </a>
+
+            <!-- Electricity -->
+            <a href="course.html?module=Electricity" class="module-card bg-orange">
+                <i class="fas fa-bolt card-icon"></i>
+                <h3 class="card-title">Electricity</h3>
+            </a>
+
+            <!-- Graph Theory -->
+            <a href="course.html?module=GraphTheory" class="module-card bg-dark-green">
+                <i class="fas fa-project-diagram card-icon"></i>
+                <h3 class="card-title">Graph Theory</h3>
+            </a>
+
+            <!-- Language Theory -->
+            <a href="course.html?module=LanguageTheory" class="module-card bg-dark-green">
+                <i class="fas fa-layer-group card-icon"></i>
+                <h3 class="card-title">Language<br>Theory</h3>
+            </a>
+
+            <!-- Computer Architecture -->
+            <a href="course.html?module=ComputerArchitecture" class="module-card bg-orange">
+                <i class="fas fa-microchip card-icon"></i>
+                <h3 class="card-title">Computer<br>Architecture</h3>
+            </a>
+
+            <!-- IHM (HCI) -->
+            <a href="course.html?module=IHM" class="module-card bg-green">
+                <i class="fas fa-mouse card-icon"></i> <!-- or fa-desktop or fa-hand-pointer -->
+                <h3 class="card-title">IHM</h3>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

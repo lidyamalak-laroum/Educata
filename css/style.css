@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --primary-bg: #2a004e;
+  --card-bg-1: #4a1c75; /* Lighter purple for cards/inputs */
+  --accent-yellow: #ffbf00;
+  --accent-orange: #ff9f1c;
+  --accent-green: #2ec4b6;
+  --text-white: #ffffff;
+  --text-gray: #d1d1d1;
+  --input-bg: #401566;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-white);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* === Utility Classes === */
+.hidden {
+  display: none !important;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Auth Container (Login/Signup) === */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: var(--primary-bg); /* Or transparent if we want just the form */
+  /* If separate cards per design: */
+  /* background: var(--card-bg-1); */
+  /* border-radius: 20px; */
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
+}
+
+/* Specific Card Style from Reference */
+.auth-card {
+  background-color: transparent; 
+  text-align: center;
+}
+
+.auth-header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.auth-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--accent-yellow);
+}
+.auth-icons i:first-child {
+    transform: rotate(-15deg);
+    color: #6a4c93; /* Darker purple for hat */
+}
+.auth-icons i:last-child {
+    transform: rotate(15deg);
+}
+
+
+.auth-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  color: var(--text-gray);
+  font-size: 1rem;
+}
+
+/* === Form Elements === */
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-gray); /* Often hidden in modern UI or inside placeholder */
+  display: none; /* Hiding per design reference usually having internal labels or simple layout */
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background-color: var(--input-bg);
+  border: none;
+  border-radius: 12px;
+  color: var(--text-white);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all var(--transition-speed);
+}
+
+.form-input:focus {
+  outline: none;
+  background-color: lighten(var(--input-bg), 5%);
+  box-shadow: 0 0 0 2px var(--accent-orange);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+  background-color: var(--accent-green);
+  color: var(--text-white);
+}
+
+.btn-secondary {
+  background-color: var(--accent-yellow);
+  color: #2a004e;
+}
+
+.auth-footer {
+  margin-top: 2rem;
+  color: var(--text-white);
+}
+
+.btn-link {
+  background-color: var(--accent-yellow);
+  color: #2a004e;
+  display: inline-block;
+  width: auto;
+  padding: 0.8rem 2rem;
+  margin-top: 1rem;
+}
+
+/* === Dashboard / Home === */
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.nav-back {
+  font-size: 1.5rem;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columns on mobile, more on desk */
+  gap: 1.5rem;
+}
+
+.module-card {
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: var(--text-white);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card:hover {
+  transform: scale(1.05);
+}
+
+/* Card Colors */
+.bg-orange { background-color: var(--accent-orange); }
+.bg-green { background-color: var(--accent-green); }
+.bg-dark-green { background-color: #0E7C7B; } /* Example variation */
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* === Course Details === */
+.course-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  align-items: flex-start; /* Reset center alignment from body */
+}
+
+/* Override body centering for flow pages if needed */
+body.flow-page {
+  display: block;
+  padding-top: 2rem;
+}
+.flow-page .course-container {
+    margin: 0 auto;
+}
+
+.course-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.chapter-list {
+  background: var(--card-bg-1);
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.chapter-item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 1rem;
+}
+
+.chapter-item:last-child {
+  border-bottom: none;
+}
+
+.chapter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lesson-list {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    display: none;
+}
+
+.lesson-list.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.lesson-item {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.lesson-item:hover {
+    color: var(--accent-yellow);
+}
